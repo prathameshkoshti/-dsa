@@ -1,6 +1,5 @@
 import readline from 'readline';
 import Stack from './ds/Stack';
-import { exit } from 'process';
 
 console.log('Stack package imported');
 
