@@ -1,6 +1,7 @@
 import linearSearch from './search/linearSearch';
 import readline from 'readline';
 import { stdin, stdout } from 'process';
+import checkPosition from './utilities/checkPosition';
 
 console.log('Linear search imported.');
 
@@ -17,16 +18,7 @@ let element;
 rl.question('Enter Element you want to search: ', element => {
     const position = linearSearch(array, element);
 
-    checkPosition(position);
+    checkPosition(position, element);
 
     rl.close();
 });
-
-const checkPosition = position => {
-    if(position !== null) {
-        console.log(`Element ${element} found at position: ${position}`);
-    }
-    else {
-        console.log(`Element ${element} not found in the array.`);
-    }
-}
